@@ -33,8 +33,18 @@ h1
 .clearboth {
 	clear: both;
 }
-
-.menu {
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#nav li {
+	display: block;
+	float:left;	
+	margin: 14px 0 14px 0;
+}
+#nav a {
+	padding: 15px 23px 15px 23px;
 	color: #414157;
 	text-decoration: none;
 	font-weight: bold;
@@ -48,7 +58,7 @@ h1
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
 
 }
-.menuhover {
+#nav a:hover {
 	background: rgb(204,204,204); 
 	background: -moz-linear-gradient(top,  rgba(204,204,204,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,204,204,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */

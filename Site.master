@@ -22,7 +22,12 @@
 				</div>
 			</div>
 			<div id="nav">
-                <asp:Menu ID="navMenu" runat="server" Orientation="Horizontal">
+                <asp:Menu ID="navMenu" runat="server" Orientation="Horizontal" 
+                    DynamicHorizontalOffset="2" Font-Names="Helvetica" 
+                    StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle CssClass="menuhover" />
+                    <DynamicMenuItemStyle CssClass="menu" HorizontalPadding="15px" VerticalPadding="15px" />
+                    <DynamicMenuStyle  CssClass="menu" />
                     <Items>
                         <asp:MenuItem Text="Home" NavigateUrl="MainPage.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Type of Food">
@@ -37,6 +42,8 @@
                             <asp:MenuItem Text="Thai" NavigateUrl="ByType.aspx?type=Thai"></asp:MenuItem>
                         </asp:MenuItem>
                     </Items>
+                    <StaticHoverStyle CssClass="menuhover" />
+                    <StaticMenuItemStyle CssClass="menu" HorizontalPadding="15px" VerticalPadding="15px" />
                 </asp:Menu>
 				<%--<ul>
 					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/MainPage.aspx">Home</asp:HyperLink></li>
