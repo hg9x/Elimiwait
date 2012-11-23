@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Elimi-wait</title>
+    <link href="Styles/wait.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <div id="wrapper">
+			<div id="header">
+				<asp:HyperLink ID="HyperLink1" NavigateUrl="~/MainPage.aspx" runat="server"><h1>Elimi-wait</h1></asp:HyperLink>
+				<div id="login">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink>
+				</div>
+				<div id="searchbox">
+                    <asp:TextBox ID="txtSearch" Text="Search here" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnGo" runat="server" Text="Go" />
+				</div>
+			</div>
+			<div id="nav">
+                <asp:Menu ID="navMenu" runat="server" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home" NavigateUrl="MainPage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Type of Food">
+                            <asp:MenuItem Text="American" NavigateUrl="ByType.aspx?type=American">
+                                <asp:MenuItem Text="Dessert" NavigateUrl="ByType.aspx?type=Dessert"></asp:MenuItem>
+                                <asp:MenuItem Text="Buffet" NavigateUrl="ByType.aspx?type=Buffet"></asp:MenuItem>
+                                <asp:MenuItem Text="Steakhouse" NavigateUrl="ByType.aspx?type=Steakhouse"></asp:MenuItem>
+                                <asp:MenuItem Text="Pizza" NavigateUrl="ByType.aspx?type=Pizza"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Mexican" NavigateUrl="ByType.aspx?type=Mexican"></asp:MenuItem>
+                            <asp:MenuItem Text="Italian" NavigateUrl="ByType.aspx?type=Italian"></asp:MenuItem>
+                            <asp:MenuItem Text="Thai" NavigateUrl="ByType.aspx?type=Thai"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+				<%--<ul>
+					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/MainPage.aspx">Home</asp:HyperLink></li>
+					<li><a>Type of Food</a></li>
+					<li><a>Party Size</a></li>
+					<li><a>Coupon</a></li>
+					<li><a>Best Reviews</a></li>
+					<li><a>Best Date Restaurant</a></li>
+					<li><a>Contact Us</a></li>
+				</ul>--%>
+			</div>
+			<div id="adwrapper" class="clearboth">
+                <asp:AdRotator ID="AdRotator1" CssClass="logocorners" runat="server" AdvertisementFile="~/images/ads/txads.xml" Target="_blank" />
+                <asp:AdRotator ID="AdRotator2" CssClass="logocorners" runat="server" Target="_blank" AdvertisementFile="~/images/ads/chiliads.xml" />
+                <asp:AdRotator ID="AdRotator3" CssClass="logocorners" runat="server" Target="_blank" AdvertisementFile="~/images/ads/ogads.xml" />
+                <%--<asp:AdRotator ID="AdRotator4" CssClass="logocorners" runat="server" Target="_blank" AdvertisementFile="~/images/ads/fireads.xml" />--%>
+                <asp:AdRotator ID="AdRotator5" CssClass="logocorners" runat="server" Target="_blank" AdvertisementFile="~/images/ads/bmads.xml" />
+			</div>
+			<div id="content">
+				<asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+			</div>
+			<div id="footer">
+				<ul>
+					<li><a>About Us</a></li>
+					<li><a>Contact Us</a></li>
+					<li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink></li>
+				</ul>
+			</div>
+		</div>
+    </form>
+</body>
+</html>
