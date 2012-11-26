@@ -1,7 +1,7 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
-body, div, h1, h2, ul, li, a, img {
+body, div, h1, h2, ul, li, a, img, table, td, tr {
 	margin: 0;
 	padding: 0;
 }
@@ -33,13 +33,19 @@ h1
 .clearboth {
 	clear: both;
 }
+#nav
+{
+    margin-top: -20px;
+}
 .menuitem 
 {
 	color: #414157;
     text-decoration: none;
 	font-weight: bold;
+	padding: 15px;
 }
-.menu {
+.menu 
+{
 	background: rgb(238,238,238); 
 	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
@@ -50,7 +56,9 @@ h1
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
 
 }
-.menuhover {
+.menuhover 
+{
+    padding: 15px;
 	background: rgb(204,204,204); 
 	background: -moz-linear-gradient(top,  rgba(204,204,204,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,204,204,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */

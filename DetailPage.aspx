@@ -29,7 +29,7 @@
 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
              ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
-             SelectCommand="SELECT * FROM [Restaurant] WHERE ([RestaurantID] = @RestaurantID)">
+             SelectCommand="SELECT * FROM [Restaurant$] WHERE ([RestaurantID] = @RestaurantID)">
                 <SelectParameters>
                     <asp:QueryStringParameter Name="RestaurantID" QueryStringField="id" 
                         Type="String" />

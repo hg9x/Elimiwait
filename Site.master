@@ -24,37 +24,16 @@
 			<div id="nav">
                 <asp:Menu ID="navMenu" runat="server" Orientation="Horizontal" 
                     DynamicHorizontalOffset="2" Font-Names="Helvetica" 
-                    StaticSubMenuIndent="10px">
+                    StaticSubMenuIndent="10px" DataSourceID="SiteMapDataSource1">
                     <DynamicHoverStyle CssClass="menuhover" />
                     <DynamicMenuItemStyle CssClass="menuitem" />
                     <DynamicMenuStyle  CssClass="menu" />
-                    <Items>
-                        <asp:MenuItem Text="Home" NavigateUrl="MainPage.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Type of Food">
-                            <asp:MenuItem Text="American" NavigateUrl="ByType.aspx?type=American">
-                                <asp:MenuItem Text="Dessert" NavigateUrl="ByType.aspx?type=Dessert"></asp:MenuItem>
-                                <asp:MenuItem Text="Buffet" NavigateUrl="ByType.aspx?type=Buffet"></asp:MenuItem>
-                                <asp:MenuItem Text="Steakhouse" NavigateUrl="ByType.aspx?type=Steakhouse"></asp:MenuItem>
-                                <asp:MenuItem Text="Pizza" NavigateUrl="ByType.aspx?type=Pizza"></asp:MenuItem>
-                            </asp:MenuItem>
-                            <asp:MenuItem Text="Mexican" NavigateUrl="ByType.aspx?type=Mexican"></asp:MenuItem>
-                            <asp:MenuItem Text="Italian" NavigateUrl="ByType.aspx?type=Italian"></asp:MenuItem>
-                            <asp:MenuItem Text="Thai" NavigateUrl="ByType.aspx?type=Thai"></asp:MenuItem>
-                        </asp:MenuItem>
-                    </Items>
                     <StaticHoverStyle CssClass="menuhover" />
                     <StaticMenuItemStyle CssClass="menuitem" />
                     <StaticMenuStyle CssClass="menu" />
                 </asp:Menu>
-				<%--<ul>
-					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/MainPage.aspx">Home</asp:HyperLink></li>
-					<li><a>Type of Food</a></li>
-					<li><a>Party Size</a></li>
-					<li><a>Coupon</a></li>
-					<li><a>Best Reviews</a></li>
-					<li><a>Best Date Restaurant</a></li>
-					<li><a>Contact Us</a></li>
-				</ul>--%>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" 
+                    ShowStartingNode="False" />
 			</div>
 			<div id="adwrapper" class="clearboth">
                 <asp:AdRotator ID="AdRotator1" CssClass="logocorners" runat="server" AdvertisementFile="~/images/ads/txads.xml" Target="_blank" />
