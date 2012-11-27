@@ -7,10 +7,36 @@
         <asp:LoginName ID="LoginName1" runat="server" />,
     </h2>
     <asp:HiddenField ID="HiddenField1" runat="server" />
+    
 
     <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" 
         DataKeyNames="RestaurantID" DefaultMode="Edit">
         <EditItemTemplate>
+            <div id="updatetimes">
+                <div class="timeflys">
+                    <img src="../images/2.jpg" />
+                    <asp:TextBox ID="TextBox1" runat="server" 
+                        Text='<%# Bind("WaitTime2People") %>' />
+                </div>
+                <div class="timeflys">
+                    <img src="../images/3.jpg" />
+                    <asp:TextBox ID="TextBox2" runat="server" 
+                        Text='<%# Bind("WaitTime4People") %>' />
+                </div>
+                <div class="timeflys">
+                    <img src="../images/G%20LOGO.jpg" />
+                    <asp:TextBox ID="TextBox3" runat="server" 
+                        Text='<%# Bind("WaitTime6orMorePeople") %>' />
+                </div>
+            </div>
+
+
+
+
+
+
+
+
             WaitTime2People:
             <asp:TextBox ID="WaitTime2PeopleTextBox" runat="server" 
                 Text='<%# Bind("WaitTime2People") %>' />

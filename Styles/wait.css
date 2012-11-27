@@ -158,3 +158,19 @@ h1
 	padding: 3px;
 	margin: 3px 0 0 0;
 }
+.timeflys
+{
+    float: left;
+    width: 125px;
+    height: 125px;
+    margin: 0 15px 10px 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold; 
+}
+#updatetimes
+{
+    width: 500px;
+    margin: 0 auto;
+}
