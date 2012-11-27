@@ -18,7 +18,7 @@
 			<siteMapNode title="Group" description="a group of 4+ people" url="" />
 		</siteMapNode>
 		<siteMapNode title="Coupon" description="Click for coupons" url="" />
-		<siteMapNode title="Price" description="Search by Price" url="" />
+		<siteMapNode title="By Price" description="Search by Price" url="" />
 		<siteMapNode title="Best Date Restaurant" description="Find the right place to take that special someone" url="" />
 		<siteMapNode title="Contact Us" description="Contact us at Elimiwait!" url="~/About.aspx" />
     </siteMapNode>
