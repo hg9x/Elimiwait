@@ -6,12 +6,13 @@
     <h2>Welcome 
         <asp:LoginName ID="LoginName1" runat="server" />,
     </h2>
-    <h3>Update Waiting Times for:</h3>
     <asp:HiddenField ID="HiddenField1" runat="server" />
-
+    
     <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" 
         DataKeyNames="RestaurantID" DefaultMode="Edit" Width="936px">
         <EditItemTemplate>
+            <h3>Update Waiting Times for <%# Eval("Name") %>:</h3>
+            
             <asp:HiddenField ID="HiddenField2" Value='<%# Eval("RestaurantID") %>' runat="server" />
             <div id="updatetimes">
                 <div class="timeflys">
