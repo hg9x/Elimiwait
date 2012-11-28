@@ -199,3 +199,15 @@ h1
     text-align: center;
     margin: 10px 0;
 }
+.watermark
+{
+    font-style: italic;
+    color: Gray;
+}
+        
+.nowatermark
+{
+    font-style: normal;
+    color: Black;
+    margin-right: 5px;
+}

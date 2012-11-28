@@ -12,10 +12,10 @@
 			<siteMapNode title="Italian" description="Italian food" url="~/ByType.aspx?type=Italian" />
 			<siteMapNode title="Thai" description="Thai food" url="~/ByType.aspx?type=Thai" />
 		</siteMapNode>
-		<siteMapNode title="Party Size"  description="What size of party do you have?">
-			<siteMapNode title="2" description="2 people" url="" />
-			<siteMapNode title="4" description="4 people" url="" />
-			<siteMapNode title="Group" description="a group of 4+ people" url="" />
+		<siteMapNode title="Party Size" url="~/ByPartySize.aspx" description="What size of party do you have?">
+			<siteMapNode title="2" description="2 people" url="~/ByPartySize.aspx?party=2" />
+			<siteMapNode title="4" description="4 people" url="~/ByPartySize.aspx?party=4" />
+			<siteMapNode title="Group" description="a group of 4+ people" url="~/ByPartySize.aspx?party=6" />
 		</siteMapNode>
 		<siteMapNode title="Coupon" description="Click for coupons" url="" />
 		<siteMapNode title="By Price" description="Search by Price" url="" />

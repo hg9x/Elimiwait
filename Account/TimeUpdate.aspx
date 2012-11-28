@@ -8,23 +8,6 @@
     </h2>
     <h3>Update Waiting Times for:</h3>
     <asp:HiddenField ID="HiddenField1" runat="server" />
-            <%--<div id="updatetimes">
-                <div class="timeflys">
-                    <img src="../images/2.jpg" />
-                    <asp:TextBox ID="TextBox1" runat="server" 
-                        Text='Time' Width="30px" />
-                </div>
-                <div class="timeflys">
-                    <img src="../images/3.jpg" />
-                    <asp:TextBox ID="TextBox2" runat="server" 
-                        Text='Time' Width="30px" />
-                </div>
-                <div class="timeflys">
-                    <img src="../images/G%20LOGO.jpg" height="125px" width="125px" />
-                    <asp:TextBox ID="TextBox3" runat="server" 
-                        Text='Time' Width="30px" />
-                </div>
-            </div>--%>
 
     <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" 
         DataKeyNames="RestaurantID" DefaultMode="Edit" Width="936px">

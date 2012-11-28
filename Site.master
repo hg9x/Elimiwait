@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register src="SearchBar.ascx" tagname="SearchBar" tagprefix="uc1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -10,6 +12,8 @@
 </head>
 <body>
     <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
         <div id="wrapper">
 			<div id="header">
 				<asp:HyperLink ID="HyperLink1" NavigateUrl="~/MainPage.aspx" runat="server"><h1>Elimi-wait</h1></asp:HyperLink>
@@ -26,8 +30,7 @@
                     </asp:LoginView>
 				</div>
 				<div id="searchbox">
-                    <asp:TextBox ID="txtSearch" Text="Search here" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnGo" runat="server" Text="Go" />
+                    <uc1:SearchBar ID="SearchBar1" runat="server" />
 				</div>
 			</div>
 			<div id="nav">
