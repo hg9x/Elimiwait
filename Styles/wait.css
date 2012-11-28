@@ -82,6 +82,7 @@ h1
 #login {
 	float: right;
 	margin: 5px 20px 0 0;
+	text-align: right;
 }
 #searchbox {
 	float: right;
@@ -161,16 +162,40 @@ h1
 .timeflys
 {
     float: left;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 190px;
     margin: 0 15px 10px 15px;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
     text-align: center;
-    font-weight: bold; 
+    font-weight: bold;
+    padding-top: 5px; 
 }
 #updatetimes
 {
-    width: 500px;
+    width: 550px;
     margin: 0 auto;
+    color: #414157;
+}
+#updatetimes input[type=text] 
+{
+    font-size: 1.1em;
+    text-align:center;
+    margin-right: 5px;
+    border-color: #FFFFFF;
+}
+.updatebtn
+{
+    border: 2px outset #FFFFFF;
+    border-radius: 3px;
+    background-color: #CCCCCC;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+
+}
+.centerthis 
+{
+    text-align: center;
+    margin: 10px 0;
 }

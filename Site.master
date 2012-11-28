@@ -14,7 +14,16 @@
 			<div id="header">
 				<asp:HyperLink ID="HyperLink1" NavigateUrl="~/MainPage.aspx" runat="server"><h1>Elimi-wait</h1></asp:HyperLink>
 				<div id="login">
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Hi 
+                            <asp:LoginName ID="LoginName1" runat="server" />!<br />
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" Font-Underline="True" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
 				</div>
 				<div id="searchbox">
                     <asp:TextBox ID="txtSearch" Text="Search here" runat="server"></asp:TextBox>
@@ -47,8 +56,8 @@
 			</div>
 			<div id="footer">
 				<ul>
-					<li><a>About Us</a></li>
-					<li><a>Contact Us</a></li>
+					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
+					<li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/About.aspx">Contact Us</asp:HyperLink></li>
 					<li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink></li>
 				</ul>
 			</div>

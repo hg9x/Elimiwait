@@ -10,7 +10,7 @@
         Please login to update your restaurant's waiting times.
     </p>
     <asp:Login ID="LoginUser" runat="server" EnableViewState="false" 
-        RenderOuterTable="false">
+        RenderOuterTable="false" DestinationPageUrl="~/Account/TimeUpdate.aspx">
         <LayoutTemplate>
             <span class="failureNotification">
                 <asp:Literal ID="FailureText" runat="server"></asp:Literal>
