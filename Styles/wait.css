@@ -203,11 +203,12 @@ h1
 {
     font-style: italic;
     color: Gray;
+    margin-right: 3px;
 }
         
 .nowatermark
 {
     font-style: normal;
     color: Black;
-    margin-right: 5px;
+    margin-right: 3px;
 }

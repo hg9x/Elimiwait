@@ -54,13 +54,13 @@
     </center>
 
     <p>
-        <img align="right" alt="" class="style1" src="images/food_steak.jpg" /></p>
-    
-    <div style="text-align:center">
+        &nbsp;</p>
+    <center>
+    <div style="text-align:center; width: 635px; margin-left: 177px;">
     <!--Insert LOGO here-->
         <img alt="" src="images/Logo1.jpg" style="width: 200px; height: 300px" 
-            align="left" /></div>
-
+            align="left" /><img align="right" alt="" class="style1" src="images/food_steak.jpg" /></div>
+    </center>
     </form>
 </body>
 </html>
