@@ -11,6 +11,7 @@
 			<siteMapNode title="Mexican" description="Mexican food" url="~/ByType.aspx?type=Mexican" />
 			<siteMapNode title="Italian" description="Italian food" url="~/ByType.aspx?type=Italian" />
 			<siteMapNode title="Thai" description="Thai food" url="~/ByType.aspx?type=Thai" />
+			<siteMapNode title="Chinese" description="Chinese food" url="~/ByType.aspx?type=Chinese" />
 		</siteMapNode>
 		<siteMapNode title="Party Size" url="~/ByPartySize.aspx" description="What size of party do you have?">
 			<siteMapNode title="2" description="2 people" url="~/ByPartySize.aspx?party=2" />
@@ -19,7 +20,7 @@
 		</siteMapNode>
 		<siteMapNode title="Coupon" description="Click for coupons" url="" />
 		<siteMapNode title="By Price" description="Search by Price" url="" />
-		<siteMapNode title="Best Date Restaurant" description="Find the right place to take that special someone" url="" />
+		<siteMapNode title="Best Date Restaurant" description="Find the right place to take that special someone" url="~/DetailPage.aspx?id=1000000007" />
 		<siteMapNode title="Contact Us" description="Contact us at Elimiwait!" url="~/About.aspx" />
     </siteMapNode>
 </siteMap>

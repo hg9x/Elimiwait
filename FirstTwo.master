@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FirstTwo.master.cs" Inherits="FirstTwo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Elimi-wait</title>
+    <link href="Styles/firsttwo.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+		    <div id="leftpane">
+			    <img src="images/Logo1.jpg" width="300px">
+		    </div>
+		    <div id="middlepane">
+			    <h1>Elimi-wait</h1>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+		    </div>
+		    <div id="rightpane">
+			    <img src="images/food_steak.jpg" width="200px">
+		    </div>
+	    </div>
+    </form>
+</body>
+</html>

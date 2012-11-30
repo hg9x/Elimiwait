@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <asp:Label ID="lblSearchError" runat="server" Text=""></asp:Label>
        <asp:DataList ID="DataList1" runat="server" DataKeyField="RestaurantID" 
-           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px">
+           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px" RepeatDirection="Horizontal">
            <ItemTemplate>
                <div class="restbox">
                    <a href='DetailPage.aspx?id=<%# Eval("RestaurantID") %>'>

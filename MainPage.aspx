@@ -12,7 +12,8 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
            <asp:DataList ID="DataList1" runat="server" DataKeyField="RestaurantID" 
-           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px">
+           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px" 
+               RepeatDirection="Horizontal">
            <ItemTemplate>
                <div class="restbox">
                    <a href='DetailPage.aspx?id=<%# Eval("RestaurantID") %>'>
@@ -28,7 +29,8 @@
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
            ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
            SelectCommand="SELECT ri.RestaurantID, ri.LogoImageName, wt.WaitTime2People 
-           FROM RestaurantImages AS ri INNER JOIN WaitTime AS wt ON wt.RestaurantID = ri.RestaurantID">
+           FROM RestaurantImages AS ri INNER JOIN WaitTime AS wt ON wt.RestaurantID = ri.RestaurantID
+ORDER BY wt.WaitTime2People;">
        </asp:SqlDataSource>
        
  

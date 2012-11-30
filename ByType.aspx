@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
 
        <asp:DataList ID="DataList1" runat="server" DataKeyField="RestaurantID" 
-           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px">
+           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px" RepeatDirection="Horizontal">
            <ItemTemplate>
                <div class="restbox">
                    <a href='DetailPage.aspx?id=<%# Eval("RestaurantID") %>'>
@@ -22,7 +22,8 @@
            WHERE ri.RestaurantID IN (
                         SELECT RestaurantID
                                   FROM RestaurantType
-                                  WHERE RestaurantType = @RestaurantType);">
+                                  WHERE RestaurantType = @RestaurantType)
+ORDER BY wt.WaitTime2People;">
            <SelectParameters>
                <asp:QueryStringParameter Name="RestaurantType" QueryStringField="type" />
            </SelectParameters>

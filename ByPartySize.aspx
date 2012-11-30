@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
 
        <asp:DataList ID="DataList1" runat="server" DataKeyField="RestaurantID" 
-           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px">
+           DataSourceID="SqlDataSource1" RepeatColumns="4" Width="850px" RepeatDirection="Horizontal">
            <ItemTemplate>
                <div class="restbox">
                    <a href='DetailPage.aspx?id=<%# Eval("RestaurantID") %>'>
@@ -23,7 +23,8 @@
                     WHEN 4 THEN WaitTime4People
                     WHEN 6 THEN WaitTime6orMorePeople
            END AS WaitTime
-           FROM RestaurantImages AS ri INNER JOIN WaitTime AS wt ON wt.RestaurantID = ri.RestaurantID;">
+           FROM RestaurantImages AS ri INNER JOIN WaitTime AS wt ON wt.RestaurantID = ri.RestaurantID
+ORDER BY WaitTime;">
            <SelectParameters>
                <asp:QueryStringParameter DefaultValue="2" Name="WaitTime" 
                    QueryStringField="party" />

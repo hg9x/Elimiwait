@@ -1,0 +1,48 @@
+﻿body, div, a, h1, img {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+#leftpane {
+	float: left;
+	width: 330px;
+	padding-top: 150px;
+	text-align: right;
+}
+#middlepane {
+	float: left;
+	width: 400px;
+	padding-top: 150px;
+	text-align: center;
+}
+#rightpane {
+	float: left;
+	width: 200px;
+	padding-top: 250px;
+}
+h1
+{
+    color: #414157;
+    text-shadow: 0.1em 0.1em 0.05em #BAC4D6;
+	margin-bottom: 25px;
+}
+.centerme 
+{
+    margin: 0 auto;
+
+}
+.labeltext
+{
+    font-weight: bold;
+    margin-top: 10px;
+}
+input[type=text] 
+{
+    margin-top: 10px;
+}

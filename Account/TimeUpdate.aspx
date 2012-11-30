@@ -29,7 +29,7 @@
                 </div>
                 <div class="timeflys">
                 Groups (4+)
-                    <img src="../images/G%20LOGO.jpg" height="125px" width="125px" />
+                    <img src="../images/G%20LOGO%202.jpg" height="125px" width="125px" />
                     <asp:TextBox ID="TextBox3" runat="server" 
                         Text='<%# Bind("WaitTime6orMorePeople") %>' Width="30px" />Minutes
                 </div>

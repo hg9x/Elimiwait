@@ -204,11 +204,18 @@ h1
     font-style: italic;
     color: Gray;
     margin-right: 3px;
-}
-        
+} 
 .nowatermark
 {
     font-style: normal;
     color: Black;
     margin-right: 3px;
+}
+#reviews ol 
+{
+    list-style: none;
+}
+#reviews li 
+{
+    margin: 2px 0;
 }
