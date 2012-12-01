@@ -61,7 +61,14 @@
 				<ul>
 					<li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
 					<li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/About.aspx">Contact Us</asp:HyperLink></li>
-					<li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink></li>
+					<li><asp:LoginView ID="LoginView2" runat="server">
+                        <AnonymousTemplate>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Account/Login.aspx">Manager Login</asp:HyperLink>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Account/TimeUpdate.aspx">Update Wait Times</asp:HyperLink>
+                        </LoggedInTemplate>
+                        </asp:LoginView></li>
 				</ul>
 			</div>
 		</div>

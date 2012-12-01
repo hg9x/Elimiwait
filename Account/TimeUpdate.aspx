@@ -20,18 +20,21 @@
                     <img src="../images/2.jpg" />
                     <asp:TextBox ID="TextBox1" runat="server" 
                         Text='<%# Bind("WaitTime2People") %>' Width="30px" />Minutes
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TextBox1" runat="server" ErrorMessage="Please enter a wait time for 2 people" Text="*"></asp:RequiredFieldValidator>
                 </div>
                 <div class="timeflys">
                 4 people
                     <img src="../images/3.jpg" />
                     <asp:TextBox ID="TextBox2" runat="server" 
                         Text='<%# Bind("WaitTime4People") %>' Width="30px" />Minutes
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TextBox2" runat="server" ErrorMessage="Please enter a wait time for 4 people" Text="*"></asp:RequiredFieldValidator>
                 </div>
                 <div class="timeflys">
                 Groups (4+)
                     <img src="../images/G%20LOGO%202.jpg" height="125px" width="125px" />
                     <asp:TextBox ID="TextBox3" runat="server" 
                         Text='<%# Bind("WaitTime6orMorePeople") %>' Width="30px" />Minutes
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="TextBox3" runat="server" ErrorMessage="Please enter a wait time for a group of 4+" Text="*"></asp:RequiredFieldValidator>
                 </div>
             </div>
             
@@ -39,6 +42,7 @@
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
                     CommandName="Update" Text="Update" CssClass="updatebtn" />
             </div>
+            <asp:ValidationSummary ID="ValidationSummary1" DisplayMode="BulletList" ShowMessageBox="true" ShowSummary="false" runat="server" />
         </EditItemTemplate>
     </asp:FormView>
 
