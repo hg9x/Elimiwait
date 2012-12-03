@@ -8,6 +8,6 @@
         About
     </h2>
     <p>
-        Put content here.
+     Contact us:  Elimiwait@gmail.com
     </p>
 </asp:Content>
