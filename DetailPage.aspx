@@ -241,17 +241,19 @@
     <asp:FormView ID="FormView4" runat="server" DataKeyNames="RestaurantID" 
         DataSourceID="SqlDataSource4" DefaultMode="Insert">
         <InsertItemTemplate>
-        <h3>Customer Reviews</h3>
-            <ol>
-                <li>Your Name:
-                <asp:TextBox ID="ReviewerUserNameTextBox" runat="server" 
-                    Text='<%# Bind("ReviewerUserName") %>' /></li>
-                <li>Review:
-                <asp:TextBox ID="ReviewTextTextBox" runat="server" 
-                    Text='<%# Bind("ReviewText") %>' TextMode="MultiLine" Width="258px"  /></li>
-                <li><asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
-                    CommandName="Insert" Text="Submit" CssClass="updatebtn" /></li>
-            </ol>
+            <fieldset>
+                <legend>Customer Reviews</legend>
+                <ol>
+                    <li><label for="ReviewerUserNameTextBox">Your Name:</label>
+                    <asp:TextBox ID="ReviewerUserNameTextBox" runat="server" 
+                        Text='<%# Bind("ReviewerUserName") %>' /></li>
+                    <li><label for="ReviewTextTextBox">Review:</label>
+                    <asp:TextBox ID="ReviewTextTextBox" runat="server" 
+                        Text='<%# Bind("ReviewText") %>' TextMode="MultiLine" Width="258px"  /></li>
+                    <li><asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                        CommandName="Insert" Text="Submit" CssClass="updatebtn" /></li>
+                </ol>
+            </fieldset>
         </InsertItemTemplate>
     </asp:FormView>
     </div>

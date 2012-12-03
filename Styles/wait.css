@@ -215,7 +215,28 @@ h1
 {
     list-style: none;
 }
+#reviews input[type=text], textarea {
+	float: left;
+	border-radius: 3px;
+	padding: 3px;
+	margin: 3px 0 0 0;
+}
 #reviews li 
 {
+    clear: both;
     margin: 2px 0;
+}
+#reviews fieldset {
+	width: 600px;
+	margin: 10px 5px;
+	border: none;
+	padding: 5px 0;
+}
+#reviews legend {
+	font-weight: bold;
+}
+#reviews label {
+	float: left;
+	font-size: 1.2em;
+	width: 150px;
 }
