@@ -223,8 +223,9 @@ h1
 }
 #reviews li 
 {
-    clear: both;
+    clear: left;
     margin: 2px 0;
+    height: 20px;
 }
 #reviews fieldset {
 	width: 600px;
@@ -239,4 +240,13 @@ h1
 	float: left;
 	font-size: 1.2em;
 	width: 150px;
+}
+.showreviews 
+{
+    float: right;
+    width: 300px;
+}
+.clearright 
+{
+    clear:right;
 }

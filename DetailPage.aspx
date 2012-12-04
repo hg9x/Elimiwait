@@ -69,7 +69,8 @@
         }
         .style15
         {
-            color: #333399;
+            font-size: 20pt;
+            color: #216C2A;
         }
     </style>
 </asp:Content>
@@ -88,7 +89,7 @@
 
          <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
              ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
-             SelectCommand="SELECT [SundayStart], [SundayEnd], [MondayStart], [MondayEnd], [TuesdayStart], [TuesdayEnd], [WednesdayStart], [SaturdayEnd], [SaturdayStart], [FridayEnd], [FridayStart], [ThursdayEnd], [ThursdayStart], [WednesdayEnd], rh.RestaurantID, LogoImageName
+             SelectCommand="SELECT [SundayStart],[SundayEnd], [MondayStart], [MondayEnd], [TuesdayStart], [TuesdayEnd], [WednesdayStart], [SaturdayEnd], [SaturdayStart], [FridayEnd], [FridayStart], [ThursdayEnd], [ThursdayStart], [WednesdayEnd], rh.RestaurantID, LogoImageName
         FROM RestaurantHours AS rh INNER JOIN RestaurantImages AS ri ON (rh.RestaurantID = ri.RestaurantID)
         WHERE rh.RestaurantID = @RestaurantID;">
              <SelectParameters>
@@ -99,7 +100,7 @@
 
          <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
              ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
-             SelectCommand="SELECT RestaurantID, Name, StreetAddress, City, State, ZipCode, PhoneNumber, Description 
+             SelectCommand="SELECT RestaurantID, Name, StreetAddress, City, State, ZipCode, PhoneNumber, Description, PriceRange
                   FROM Restaurant$ 
                   WHERE (RestaurantID = @RestaurantID);">
                 <SelectParameters>
@@ -107,7 +108,6 @@
                         Type="String" />
                 </SelectParameters>
          </asp:SqlDataSource>
-
 
          <asp:FormView ID="FormView2" runat="server" DataKeyNames="RestaurantID" 
              DataSourceID="SqlDataSource2">
@@ -197,7 +197,7 @@
                             <td class="style14">
                                 &nbsp;
                                 <img alt="" class="style11" src="images/restaurants/dollarLogo.png" />
-                                <strong><span class="style13">&nbsp; </span><span class="style15">$$$$ </span></strong>
+                                <strong><span class="style13">&nbsp; </span><span class="style15"><%# Eval("PriceRange") %> </span></strong>
                             </td>
                         </tr>
                     </table>
@@ -258,6 +258,26 @@
     </asp:FormView>
     </div>
 
+    <%--<asp:DataList ID="DataList1" CssClass="showreviews" runat="server" DataSourceID="SqlDataSource5">
+        <ItemTemplate>
+            <div class="clearright">
+                By: <asp:Label ID="ReviewUserNameLabel" runat="server" Text='<%# Eval("ReviewerUserName") %>' /><br />
+                <asp:Label ID="ReviewTextLabel" runat="server" Text='<%# Eval("ReviewText") %>' />
+            </div>
+        </ItemTemplate>
+    </asp:DataList>
+    
+
+         <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
+             ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
+             SelectCommand="SELECT [ReviewText], [ReviewerUserName] FROM [CustomerReviews] WHERE ([RestaurantID] = @RestaurantID)">
+             <SelectParameters>
+                 <asp:QueryStringParameter Name="RestaurantID" QueryStringField="id" 
+                     Type="Int32" />
+             </SelectParameters>
+         </asp:SqlDataSource>--%>
+    
+
      <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
         ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
         DeleteCommand="DELETE FROM [CustomerReviews] WHERE [RestaurantID] = @RestaurantID" 
@@ -269,7 +289,8 @@
              <asp:Parameter Name="RestaurantID" Type="Int32" />
          </DeleteParameters>
          <InsertParameters>
-             <asp:Parameter Name="RestaurantID" Type="Int32" />
+             <asp:QueryStringParameter Name="RestaurantID" QueryStringField="id" 
+                 Type="Int32" />
              <asp:Parameter Name="ReviewText" Type="String" />
              <asp:Parameter Name="ReviewerUserName" Type="String" />
          </InsertParameters>

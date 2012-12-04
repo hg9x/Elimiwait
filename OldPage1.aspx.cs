@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
 
-public partial class Page1a : System.Web.UI.Page
+public partial class Page1 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -14,7 +14,7 @@ public partial class Page1a : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        if (IsValidEmail(EmailAddress.Text))
+        if (IsValidEmail(EmailAddress.Text ))
         {
             //some other handle next
             Response.Redirect("Page2.aspx");

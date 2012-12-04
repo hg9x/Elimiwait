@@ -18,9 +18,14 @@
 			<siteMapNode title="4" description="4 people" url="~/ByPartySize.aspx?party=4" />
 			<siteMapNode title="Group" description="a group of 4+ people" url="~/ByPartySize.aspx?party=6" />
 		</siteMapNode>
-		<siteMapNode title="Coupon" description="Click for coupons" url="" />
-		<siteMapNode title="By Price" description="Search by Price" url="" />
+		<siteMapNode title="Coupons" description="Click for coupons" url="~/Coupons.aspx" />
+      <siteMapNode title="By Price" description="Search by Price" url="">
+      <siteMapNode title="$$$$" description="Most Expensive" url="~/ByPrice.aspx?price=4" />
+      <siteMapNode title="$$$" description="More Expensive" url="~/ByPrice.aspx?price=3" />
+      <siteMapNode title="$$" description="Less Expensive" url="~/ByPrice.aspx?price=2" />
+      <siteMapNode title="$" description="Least Expensive" url="~/ByPrice.aspx?price=1" />
+    </siteMapNode>
 		<siteMapNode title="Best Date Restaurant" description="Find the right place to take that special someone" url="~/DetailPage.aspx?id=1000000007" />
-		<siteMapNode title="Contact Us" description="Contact us at Elimiwait!" url="~/About.aspx" />
+		<siteMapNode title="Contact Us" description="Contact us at Elimiwait!" url="~/ContactUs.aspx" />
     </siteMapNode>
 </siteMap>

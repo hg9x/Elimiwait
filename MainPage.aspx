@@ -4,6 +4,7 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+
     <asp:ScriptManagerProxy ID="ScriptManagerProxy1" runat="server">
     </asp:ScriptManagerProxy>
 

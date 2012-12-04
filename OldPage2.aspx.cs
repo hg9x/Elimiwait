@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Page2a : System.Web.UI.Page
+public partial class Page2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -21,5 +21,9 @@ public partial class Page2a : System.Web.UI.Page
         {
             Response.Write("<script>alert('Please select a city')</script>");
         }
+    }
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }
