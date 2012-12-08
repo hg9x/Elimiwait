@@ -13,4 +13,8 @@ public partial class DetailPage : System.Web.UI.Page
 
     }
 
+    protected void FormView4_ItemInserted(object sender, FormViewInsertedEventArgs e)
+    {
+        DataList1.DataBind();
+    }
 }

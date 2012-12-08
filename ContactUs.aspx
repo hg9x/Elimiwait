@@ -7,7 +7,26 @@
         Contact us
     </h2>
     <p>
-     Email:  Elimiwait@gmail.com
+        &nbsp;</p>
+    <p>
+        <strong>Contact us:</strong> <a href="mailto:Elimiwait@gmail.com">Elimiwait@gmail.com</a>
     </p>
+    <p>
+        Chao Guo: Chief Executive 
+        Officer (CEO)  <a href="mailto:guochao37@hotmail.com">guochao37@hotmail.com</a>
+    </p>
+    <p>
+        Stuart Baker: Chief Operations Officer (COO)  
+        <a href="mailto:stubakers@gmail.com">stubakers@gmail.com</a>
+    </p>
+    <p>
+        Jared Hardinger: Chief Information Officer (CIO) 
+        <a href="mailto:jared.hardinger@aggiemail.usu.edu">jared.hardinger@aggiemail.usu.edu</a>
+    </p>
+    <p>
+        Xin Liu: Chief Markting Officer (CMO) <a href="mailto:lx_1103@hotmail.com">lx_1103@hotmail.com</a>
+    </p>
+    <p>
+        &nbsp;</p>
 </asp:Content>
 

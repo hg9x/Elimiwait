@@ -239,7 +239,8 @@
 
     <div id="reviews">
     <asp:FormView ID="FormView4" runat="server" DataKeyNames="RestaurantID" 
-        DataSourceID="SqlDataSource4" DefaultMode="Insert">
+        DataSourceID="SqlDataSource4" DefaultMode="Insert" 
+            oniteminserted="FormView4_ItemInserted">
         <InsertItemTemplate>
             <fieldset>
                 <legend>Customer Reviews</legend>
@@ -256,17 +257,17 @@
             </fieldset>
         </InsertItemTemplate>
     </asp:FormView>
-    </div>
+    </div>    
 
-    <%--<asp:DataList ID="DataList1" CssClass="showreviews" runat="server" DataSourceID="SqlDataSource5">
+    <asp:DataList ID="DataList1" CssClass="showreviews" runat="server" DataSourceID="SqlDataSource5">
         <ItemTemplate>
             <div class="clearright">
-                By: <asp:Label ID="ReviewUserNameLabel" runat="server" Text='<%# Eval("ReviewerUserName") %>' /><br />
+                By: <strong><asp:Label ID="ReviewUserNameLabel" runat="server" Text='<%# Eval("ReviewerUserName") %>' /></strong><br />
                 <asp:Label ID="ReviewTextLabel" runat="server" Text='<%# Eval("ReviewText") %>' />
             </div>
         </ItemTemplate>
     </asp:DataList>
-    
+
 
          <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
              ConnectionString="<%$ ConnectionStrings:elimiwaitfall2012ConnectionString %>" 
@@ -275,7 +276,7 @@
                  <asp:QueryStringParameter Name="RestaurantID" QueryStringField="id" 
                      Type="Int32" />
              </SelectParameters>
-         </asp:SqlDataSource>--%>
+         </asp:SqlDataSource>
     
 
      <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
